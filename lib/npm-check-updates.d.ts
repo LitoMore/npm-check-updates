@@ -17,6 +17,9 @@ declare namespace ncu {
     /** check only a specific section(s) of dependencies: prod, dev, peer, optional, bundle (comma-delimited) */
     dep?: string;
 
+    /** iteratively installs upgrades and runs tests to identify breaking upgrades */
+    doctor?: boolean;
+
     /** include only packages that satisfy engines.node as specified in the package file */
     enginesNode?: boolean;
 
@@ -56,8 +59,8 @@ declare namespace ncu {
     /** npm, yarn (default: "npm") */
     packageManager?: string;
 
-    /** include stringified package file (use stdin instead) */
-    packageData?: boolean;
+    /** package file data (you can also use stdin) */
+    packageData?: string;
 
     /** package file location (default: ./package.json) */
     packageFile?: string;

@@ -90,6 +90,8 @@ $ ncu "/^(?!gulp-).*$/" # windows
 --dep <dep>                  check only a specific section(s) of
                              dependencies: prod, dev, peer, optional, bundle
                              (comma-delimited)
+--doctor                     iteratively installs upgrades and runs tests to
+                             identify breaking upgrades
 --enginesNode                include only packages that satisfy engines.node
                              as specified in the package file
 -e, --errorLevel <n>         set the error level. 1: exits with error code 0
@@ -121,8 +123,7 @@ $ ncu "/^(?!gulp-).*$/" # windows
 -n, --newest                 find the newest versions available instead of
                              the latest stable versions (--target newest)
 -p, --packageManager <name>  npm, yarn (default: "npm")
---packageData                include stringified package file (use stdin
-                             instead)
+--packageData <string>       package file data (you can also use stdin)
 --packageFile <filename>     package file location (default: ./package.json)
 --pre <n>                    Include -alpha, -beta, -rc. (default: 0; default
                              with --newest and --greatest: 1)
